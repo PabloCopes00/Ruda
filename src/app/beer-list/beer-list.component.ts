@@ -8,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class BeerListComponent implements OnInit {
 
   beer = {
-    "nombre": "New England Ipa",
-    "tipo": "Rubia",
-    "ABV/IBU": "6%/45",
+    "name": "New England Ipa",
+    "type": "Rubia",
+    "abvibu": "6% / 45",
     "stock": 30,
-    "precio": 30
-
+    "price": 600
   };
 
   constructor() { }
