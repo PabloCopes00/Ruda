@@ -12,13 +12,13 @@ const routes: Routes = [
     pathMatch: 'full',    
   },
   {
-    path: 'beers',
-    component: BeerRudaComponent,  
+    path: 'home',
+    redirectTo: 'beers',  //directamente component: y mandar el component del home.
+    pathMatch: 'full',  
   },
   {
-    path: 'home',
-    redirectTo: 'beers',
-    pathMatch: 'full',  
+    path: 'beers',
+    component: BeerRudaComponent,  
   },
   {
     path: 'about',
