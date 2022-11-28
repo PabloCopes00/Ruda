@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BeerAboutComponent } from './ruda-abaut/beer-about.component';
+import { BeerAboutComponent } from './ruda-about/beer-about.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerRudaComponent } from './ruda-beers/beer-ruda.component';
 

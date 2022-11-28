@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerMarketComponent } from './cart/beer-market.component';
-import { BeerAboutComponent } from './ruda-abaut/beer-about.component';
+import { BeerAboutComponent } from './ruda-about/beer-about.component';
 import { BeerRudaComponent } from './ruda-beers/beer-ruda.component';
 
 
