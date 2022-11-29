@@ -8,8 +8,8 @@ import { __importDefault } from 'tslib';
   styleUrls: ['./input-integer.component.scss']
 })
 export class InputIntegerComponent implements OnInit {
-
-  constructor() {}
+    constructor() {
+  }
   @Input()  quantity!: number;
   @Input()  max!: number;
   @Output() quantityChange: EventEmitter<number> = new EventEmitter<number>();
@@ -17,7 +17,6 @@ export class InputIntegerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   upQuantity(): void {
     if(this.quantity < this.max) {
       this.quantity++;
