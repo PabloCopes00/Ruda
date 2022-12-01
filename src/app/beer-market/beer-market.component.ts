@@ -24,13 +24,5 @@ export class BeerMarketComponent implements OnInit {
       sum += (beer.quantity * beer.price);
     })
     return sum;
-  }
-  totalUnit(){
-    let tUnit = 0;
-    this.beers.forEach(beer =>{
-      tUnit += (beer.quantity * beer.price);;
-    })
-    return tUnit;
-  }
- 
+  } 
 }

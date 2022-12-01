@@ -23,7 +23,6 @@ export class BeerCartService {
     } else {
       item.quantity += beer.quantity;
     }
-    console.log(this._cartList);
     this.cartList.next(this._cartList);
   }
 
