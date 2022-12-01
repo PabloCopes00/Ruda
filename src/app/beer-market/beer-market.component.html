@@ -1,10 +1,10 @@
 <h3>Carrito de compras</h3>
-<table class="table text-center">
+<table class="table text-center table-hover">
     <thead class="table-dark">
         <tr>
             <th></th>
             <th>Nombre</th>
-            <th>$ Unit.</th>
+            <th>Precio</th>
             <th>Cantidad</th>
         </tr>
     </thead>
@@ -16,5 +16,5 @@
             <td>{{beer.quantity}}</td>
         </tr>
     </tbody>
-    <h6>Total: {{total() | currency}}</h6>
 </table>
+<h6>TOTAL: {{total() | currency}}</h6>
