@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Beer } from './beer-list/Beer';
 
 /**
@@ -12,11 +12,10 @@ import { Beer } from './beer-list/Beer';
 export class BeerCartService {
 
   private _cartList: Beer[] = [];
-
   cartList: BehaviorSubject<Beer[]> = new BehaviorSubject(this._cartList);
-
+   BeerCartService: any;
   constructor() { }
-
+  
   addToCart(beer: Beer) {
     let item: Beer = this._cartList.find((v1) => v1.name == beer.name)!;
     if(!item) {
@@ -25,7 +24,7 @@ export class BeerCartService {
       item.quantity += beer.quantity;
     }
     console.log(this._cartList);
-    this.cartList.next(this._cartList); // equivalente al emitt de eventos
+    this.cartList.next(this._cartList);
   }
 
 }

@@ -6,7 +6,6 @@
             <th>Nombre</th>
             <th>$ Unit.</th>
             <th>Cantidad</th>
-            <th>Total</th>
         </tr>
     </thead>
     <tbody>
@@ -15,8 +14,7 @@
             <td>{{beer.name}}</td>
             <td>{{beer.price | currency}}</td>
             <td>{{beer.quantity}}</td>
-            <td>{{beer.quantity}}</td>
         </tr>
-        <td><P>Total $ quantity x price</P></td>
     </tbody>
+    <h6>Total: {{total() | currency}}</h6>
 </table>

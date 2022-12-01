@@ -9,11 +9,28 @@ import { Beer } from '../beer-list/Beer';
 })
 export class BeerMarketComponent implements OnInit {
   cartList$: Observable<Beer[]>;
-
-  constructor(private cart: BeerCartService) { 
+  beers: Beer[] = [];
+  constructor(
+    private cart: BeerCartService) { 
     this.cartList$ = cart.cartList.asObservable();
   }
   ngOnInit(): void {
+    this.cart.cartList
+    .subscribe(beers => this.beers = beers);
   }
-
+  total(){
+    let sum = 0;
+    this.beers.forEach(beer =>{
+      sum += (beer.quantity * beer.price);
+    })
+    return sum;
+  }
+  totalUnit(){
+    let tUnit = 0;
+    this.beers.forEach(beer =>{
+      tUnit += (beer.quantity * beer.price);;
+    })
+    return tUnit;
+  }
+ 
 }
