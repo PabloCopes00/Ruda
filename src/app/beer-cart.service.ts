@@ -26,4 +26,9 @@ export class BeerCartService {
     this.cartList.next(this._cartList);
   }
 
+  emptyCart(){
+    this._cartList = [];
+    this.cartList.next(this._cartList);
+  }
+
 }

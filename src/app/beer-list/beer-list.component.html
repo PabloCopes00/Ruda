@@ -1,4 +1,6 @@
+
 <table class="table text-center table-hover">
+
     <thead class="table-dark">
         <tr>
             <th></th>
@@ -22,7 +24,10 @@
             <td>{{beer.price | currency}}</td>
             <td><span *ngIf="beer.stock==0" class="badge text-bg-danger">Sin Stock</span></td>
             <td><app-input-integer [(quantity)]="beer.quantity" [max]="beer.stock" *ngIf="beer.stock" (maxReached)="maxReached($event)"></app-input-integer></td>
-            <td><button class="btn btn-primary" (click)="addToCart(beer)">Comprar</button></td>
+            <td><button class="btn btn-outline-primary" (click)="addToCart(beer)">Agregar</button></td>
         </tr>
     </tbody>
 </table>
+    <div>
+        Las cervezas con logo verde solo por hoy, tienen {{descuento}}% descuento
+    </div>

@@ -25,4 +25,8 @@ export class BeerMarketComponent implements OnInit {
     })
     return sum;
   } 
+  clearCart():void {
+    this.total(); 
+    this.cart.emptyCart();  
+  }
 }

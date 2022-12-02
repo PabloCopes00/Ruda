@@ -10,6 +10,7 @@ import { Beer } from './Beer';
 })
 export class BeerListComponent implements OnInit {
   beers: Beer[] = [];
+  descuento = 10;
 
   constructor(
     private cart: BeerCartService,
